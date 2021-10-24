@@ -1,0 +1,213 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>our cakes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/bootstrap-responsive.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/isotope.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/touchTouch.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+
+<!--[if lt IE 8]>
+		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
+	<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <link rel="stylesheet" href="{% static 'css/ie.css' %}" type="text/css" media="screen">
+<![endif]-->
+</head>
+
+<body class="subpage">
+<div id="main">
+
+<div class="top1">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="top1_inner clearfix">
+	<header><div class="logo_wrapper"><a href="index.html" class="logo"><h1>ISSIQNON</h1></a></div></header>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hl1"></div>
+<div class="hl2">
+<div class="hl2_inner">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="hl1_inner2">
+	<div class="navbar navbar_">
+		<div class="navbar-inner navbar-inner_">
+			<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<div class="nav-collapse nav-collapse_ collapse">
+				<ul class="nav sf-menu clearfix">
+					<li><a href="{% url 'blog:index' %}">home</a></li>
+					<li class="sub-menu sub-menu-1"><a href="{% url 'blog:about' %}">about</a>
+
+					</li>
+					<li class="active"><a href="{% url 'blog:products' %}">our cakes</a></li>
+					<li><a href="{% url 'blog:service' %}">services</a></li>
+					<li><a href="{% url 'blog:menu' %}">MENU</a></li>
+					<li><a href="{% url 'blog:contact' %}">contacts</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="page_title"><div class="page_title_left"></div><div class="page_title_px">Our Cakes</div><div class="page_title_right"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hl3"></div>
+
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="box1">
+
+	<h1>Our Cakes</h1>
+
+
+
+    <ul class="thumbnails thumbnails-iisotope" id="isotope-items">
+                                                                                        {% for p in posts %}
+
+        <li class="isotope-element isotope-filter1">
+			<div class="thumb-isotope">
+				<div class="thumbnail clearfix">
+					<a href="{{ p.image.url }}">
+
+
+						<figure style="width: 200px; height: 200px;" >
+							<img src="{{ p.image.url }}" alt=""><em></em>
+						</figure>
+
+						<div class="caption">
+							{{ p.name }}
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+        </li>
+
+                                                                                                {% endfor %}
+
+    </ul>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="bot1">
+<div class="bot1_inner">
+	<div class="menu_bot">
+	    <ul id="menu_bot" class="clearfix">
+	      <li><a href="{% url 'blog:index' %}">home</a></li>
+	      <li><a href="{% url 'blog:about' %}">about</a></li>
+	      <li><a href="{% url 'blog:products' %}">our cakes</a></li>
+	      <li><a href="{% url 'blog:service' %}">services</a></li>
+	      <li><a href="{% url 'blog:menu' %}">MENU</a></li>
+	      <li><a href="{% url 'blog:contact' %}">contacts</a></li>
+	    </ul>
+	</div>
+</div>
+</div>
+<footer>
+	<div class="copyright">Copyright © 2020 <a href="https://gridgum.com/themes/category/free/">Free Bootstrap Templates</a>. All rights reserved.</div>
+</footer>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/superfish.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/jquery.ui.totop.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/touchTouch.jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.isotope.min.js' %}"></script>
+
+<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+<script>
+$(document).ready(function() {
+	//
+
+}); //
+$(window).load(function() {
+	// isotop
+	var $container = $('#isotope-items'),
+		$optionSet = $('#isotope-options'),
+	    $optionSets = $('#isotope-filters'),
+	    $optionLinks = $optionSets.find('a');
+    $container.isotope({
+        filter: '*',
+        layoutMode: 'fitRows'
+    });
+   	$optionLinks.click(function(){
+   		var $this = $(this);
+    	// don't proceed if already selected
+		if ( $this.hasClass('selected') ) {
+			return false;
+		}
+   		$optionSet.find('.selected').removeClass('selected');
+   		$this.addClass('selected');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector
+        });
+      	return false;
+    });
+	$(window).on("resize", function( event ) {
+		$container.isotope('reLayout');
+	});
+
+	// touchTouch
+	$('.thumb-isotope .thumbnail a').touchTouch();
+
+}); //
+</script>
+
+</body>
+</html>
