@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import *
-from config.settings import EMAIL_HOST_USER
+# from config.settings import EMAIL_HOST_USER
 from . import forms
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
@@ -10,7 +10,7 @@ from django.views.generic.list import ListView
 from django.views.generic import TemplateView,DetailView,View
 from rest_framework.decorators import api_view
 from rest_framework.views import Response
-from .serial import *
+# from .serial import *
 
 
 class IndexView(TemplateView):

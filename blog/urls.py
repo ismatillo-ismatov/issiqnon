@@ -12,5 +12,5 @@ urlpatterns = [
     path('menu',MenuView.as_view(),name="menu"),
     path('about',AboutUs.as_view(),name='about'),
     path('contact',ContactView.as_view(),name="contact"),
-    path("search_product",search_product,name="search_product")
+    # path("search_product",search_product,name="search_product")
 ]
